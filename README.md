@@ -2,7 +2,7 @@
 
 Resume, cover letter, and landing page for Youssef Abid, Flutter & Cross-Platform Engineer.
 
-Live: https://youssefabid.github.io
+Live: https://youssefabidup.github.io
 
 ## Structure
 - `index.html` — landing page
