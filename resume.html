@@ -23,6 +23,21 @@
     .proj, .side-group, .job-org { break-inside: avoid; }
     *, *::before, *::after { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
   }
+  /* ---- Responsive (screen only) ---- */
+  @media screen and (max-width: 840px) {
+    .rs-body { flex-direction: column !important; gap: 26px !important; padding-left: 38px !important; padding-right: 38px !important; }
+    .rs-side { width: 100% !important; }
+    .rs-header { padding-left: 38px !important; padding-right: 38px !important; }
+  }
+  @media screen and (max-width: 560px) {
+    .sheet-wrap { padding-left: 12px !important; padding-right: 12px !important; padding-top: 28px !important; }
+    .rs-header { padding: 26px 22px !important; }
+    .rs-header-row { gap: 20px !important; align-items: flex-start !important; }
+    .rs-contact { text-align: left !important; width: 100% !important; }
+    .rs-body { padding-left: 22px !important; padding-right: 22px !important; gap: 22px !important; }
+    .rs-h1 { font-size: 30px !important; }
+    .rs-avatar { width: 68px !important; height: 68px !important; }
+  }
 </style>
 </head>
 <body>
@@ -34,17 +49,17 @@
     <div class="sheet" style="background:#FFFFFF;border-radius:8px;overflow:hidden;box-shadow:0 18px 48px rgba(10,14,26,0.16),0 0 0 1px rgba(10,14,26,0.04);">
 
       <!-- Header -->
-      <div style="position:relative;background:radial-gradient(ellipse at 88% -30%, rgba(155,107,255,0.40) 0%, transparent 55%), radial-gradient(ellipse at 6% 130%, rgba(91,107,255,0.34) 0%, transparent 55%), #0A0E1A;padding:24px 52px 22px;color:#F2F1ED;">
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;">
+      <div style="position:relative;background:radial-gradient(ellipse at 88% -30%, rgba(155,107,255,0.40) 0%, transparent 55%), radial-gradient(ellipse at 6% 130%, rgba(91,107,255,0.34) 0%, transparent 55%), #0A0E1A;padding:24px 52px 22px;color:#F2F1ED;" class="rs-header">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;" class="rs-header-row">
           <div style="display:flex;align-items:center;gap:24px;min-width:0;">
-            <img src="headshot.png" alt="Youssef Abid" style="width:88px;height:88px;flex:none;border-radius:50%;object-fit:cover;border:2px solid rgba(183,166,255,0.55);box-shadow:0 0 0 5px rgba(155,107,255,0.12),0 10px 24px rgba(0,0,0,0.35);">
+            <img src="headshot.png" alt="Youssef Abid" class="rs-avatar" style="width:88px;height:88px;flex:none;border-radius:50%;object-fit:cover;border:2px solid rgba(183,166,255,0.55);box-shadow:0 0 0 5px rgba(155,107,255,0.12),0 10px 24px rgba(0,0,0,0.35);">
             <div style="min-width:0;">
-              <h1 style="margin:0;font-size:38px;font-weight:600;letter-spacing:-0.028em;line-height:1.02;color:#F2F1ED;">Youssef Abid</h1>
+              <h1 class="rs-h1" style="margin:0;font-size:38px;font-weight:600;letter-spacing:-0.028em;line-height:1.02;color:#F2F1ED;">Youssef Abid</h1>
               <div style="margin-top:12px;font-family:'Geist Mono',monospace;font-size:12.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B7A6FF;">Flutter &amp; Cross-Platform Engineer</div>
               <div style="margin-top:9px;display:inline-flex;align-items:center;gap:7px;font-family:'Geist Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#3DD9D6;"><span style="width:6px;height:6px;border-radius:50%;background:#3DD9D6;box-shadow:0 0 8px #3DD9D6;"></span>Open to remote · worldwide</div>
             </div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:6px;text-align:right;font-size:12.5px;line-height:1.4;color:#A8AEC4;font-family:'Geist Mono',monospace;">
+          <div class="rs-contact" style="display:flex;flex-direction:column;gap:6px;text-align:right;font-size:12.5px;line-height:1.4;color:#A8AEC4;font-family:'Geist Mono',monospace;">
             <a href="mailto:youssef.abidup@gmail.com" style="text-decoration:none;color:#A8AEC4;">youssef.abidup@gmail.com</a>
             <a href="https://linkedin.com/in/youssefabid" target="_blank" rel="noopener" style="text-decoration:none;color:#A8AEC4;">linkedin.com/in/youssefabid</a>
             <a href="https://github.com/youssefAbidUp" target="_blank" rel="noopener" style="text-decoration:none;color:#A8AEC4;">github.com/youssefAbidUp</a>
@@ -53,7 +68,7 @@
       </div>
 
       <!-- Body -->
-      <div style="display:flex;gap:40px;align-items:flex-start;padding:22px 52px 10px;">
+      <div class="rs-body" style="display:flex;gap:40px;align-items:flex-start;padding:22px 52px 10px;">
 
         <!-- Main -->
         <div style="flex:1;min-width:0;">
@@ -102,7 +117,7 @@
         </div>
 
         <!-- Sidebar -->
-        <div style="width:236px;flex:none;">
+        <div class="rs-side" style="width:236px;flex:none;">
           <div style="display:flex;align-items:center;gap:10px;margin:0 0 14px;"><span style="font-family:'Geist Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#5B6BFF;white-space:nowrap;">Toolbox</span><span style="flex:1;height:1px;background:#D4D3CD;"></span></div>
           <div style="display:flex;flex-direction:column;gap:12px;margin:0 0 24px;">
             <div><div style="font-size:11px;font-weight:600;color:#0A0E1A;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 3px;">Core</div><div style="font-size:12.3px;line-height:1.5;color:#3D4252;">Flutter · Dart · .NET (C#) · JavaScript · SCSS · Tailwind</div></div>
